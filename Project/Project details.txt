@@ -1,0 +1,3 @@
+Main idea of this project is to create a Tourism website,
+where people can plan to travel and know more about the place, 
+and they can find information about the cost of the trip,

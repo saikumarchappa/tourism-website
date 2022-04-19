@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style login.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Login</title>
+    <script>
+   
+      var usersList = localStorage.getItem("globalObject");
+      usersList = JSON.parse(usersList);
+      usersList.forEach(function (user) {
+          console.log(user.userName);
+      });
+
+ 
+      function login() {
+          var userName = document.getElementById('username').value;
+          var password = document.getElementById('password').value;
+          var status = false;
+          usersList.forEach(function (user) {
+              if(user.U_name == userName && user.Pswd == password){
+                  status = true;
+              }
+          });
+          if(status == true){
+              window.location.href = "../User.html";
+          }else{
+              alert("Wrong Details");
+          }
+      }
+
+  </script>
+</head>
+<body>
+    <div class="background">
+   <header>
+       <h1 class="heading"> Tourism </h1>
+   </header> 
+   <main>
+    <div class="design">
+   
+       <h2>Login</h2>
+       <label for="username">Username</label>
+       <input type="username" name="username" id="username">
+       <br>
+       <label for="pswd">Password</label>
+       <input type="pswd" name="password" id="password">
+       <br>
+       <input onclick = "login()" type = "submit" class="button input" value = "login" name="login">   
+   
+   
+<div class="user">
+  <a class="active" href="register.html">New User? | Register</a>
+</div>
+  </div>
+  </main>
+  </div>
+</body>
+</html>
