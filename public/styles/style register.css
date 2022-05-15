@@ -10,7 +10,7 @@ input {
 }
 
 .background {
-    background-image: url(/Project/images/register\ image.jpg);
+    background-image: url(/public/images/register\ image.jpg);
     background-size: cover;
     height: 100vh;
     width: 100vw;
