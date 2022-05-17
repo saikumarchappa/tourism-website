@@ -15,11 +15,13 @@ function login(e) {
     if(!data.message) {
       setCurrentUser(data);
       window.location.href = "./User.html";
-    }else{
-      window.location.href = "./User.html";
     }
+    // else{
+    //   window.location.href = "./User.html";
+    // }
   })
   .catch((error) => {
+    alert(error.message)
     const errText = error.message;
     document.querySelector("#login-form p.error").innerHTML = errText;
     document.getElementById("pswd").value = "";
@@ -41,13 +43,14 @@ function register(e) {
   fetchData('/users/register', {username: name, password: pswd, firstName: f_name, lastName: l_name}, "POST")
   .then((data) => {
     if(!data.message) {
-      setCurrentUser(data);
       window.location.href = "./login.html";
-    }else{
+    }
+    else{
       window.location.href = "./login.html";
     }
   })
   .catch((error) => {
+    alert(error.message)
     const errText = error.message;
     document.querySelector("#reg-form p.error").innerHTML = errText;
     document.getElementById("pswd").value = "";

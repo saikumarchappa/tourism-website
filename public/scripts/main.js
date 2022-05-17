@@ -47,6 +47,7 @@ export function setCurrentUser(user) {
 
 export function removeCurrentUser() {
   localStorage.removeItem('user')
+  localStorage.removeItem('cart')
 }
 
 export function getCurrentUser() {
