@@ -100,13 +100,13 @@ The logout functionality will allow the user to logout from their account.
 
 ## Bugs
 
-* Tours and Travel link is not working right now
+* Everything is working fine.
 
 
 
 ## Things to be improved
 
-* Css has to be improved
+* Css styling
 * I want to add checkout function in future
 
 
